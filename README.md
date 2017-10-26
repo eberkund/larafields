@@ -1,3 +1,3 @@
-# eberkund/larafields
+# Larafields
 
 A custom fields package for Laravel
