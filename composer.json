@@ -1,0 +1,26 @@
+{
+    "name": "eberkund/larafields",
+    "description": "A custom fields package for Laravel",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "author": {
+        "name": "Erik Berkun-Drevnig"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eberkund\\Larafields\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eberkund\\Larafields\\LarafieldsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
