@@ -13,7 +13,17 @@ class CreateLarafieldsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('fields', function (Blueprint $table) {
+            $table->increments('id');
+            $table->enum('type', [
+                'text', 'email', 'password', 'radio', 'checkbox', 'textarea',
+                'select', 'file', 'date', 'switch', 'range'
+            ]);
+            $table->string('name');
+            $table->string('label');
+            $table->json('options');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class CreateLarafieldsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('fields');
     }
 }

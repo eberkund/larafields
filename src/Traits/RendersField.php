@@ -8,11 +8,19 @@ trait RendersField
 {
     /**
      * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @return string
      * @throws InvalidFieldTypeException
      */
     public function view()
     {
-        switch ($this->type) {
+        switch ($this->getType()) {
             case 'text':
             case 'email':
             case 'date':
@@ -28,8 +36,10 @@ trait RendersField
                 return 'larafields::select';
             case 'textarea':
                 return 'larafields::textarea';
+            case 'range':
+                return 'larafields::range';
             default:
-                throw new InvalidFieldTypeException;
+                throw new InvalidFieldTypeException($this);
         }
     }
 }

@@ -3,23 +3,19 @@
 namespace Eberkund\Larafields;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Routing\Router;
 
 class LarafieldsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      *
-     * @param Router $router
      * @return void
      */
-    public function boot(Router $router)
+    public function boot()
     {
         $this->publishes([
             __DIR__.'/Config/larafields.php' => config_path('larafields.php'),
         ], 'larafields-config');
-
-        $this->loadRoutesFrom(__DIR__ . '/Routes/web.php');
 
         $this->loadMigrationsFrom(__DIR__ . '/Migrations');
 
@@ -34,16 +30,6 @@ class LarafieldsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/Views' => resource_path('views/vendor/larafields'),
         ], 'larafields-views');
-
-        $this->publishes([
-            __DIR__ . '/Assets' => public_path('vendor/larafields'),
-        ], 'larafields-assets');
-
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                Commands\LarafieldsCommand::class,
-            ]);
-        }
     }
 
     /**
