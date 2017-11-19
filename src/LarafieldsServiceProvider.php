@@ -21,8 +21,6 @@ class LarafieldsServiceProvider extends ServiceProvider
             __DIR__.'/Migrations' => database_path('migrations'),
         ], 'larafields-migrations');
 
-//        $this->loadMigrationsFrom(__DIR__ . '/Migrations');
-
         $this->loadTranslationsFrom(__DIR__ . '/Translations', 'larafields');
 
         $this->publishes([
