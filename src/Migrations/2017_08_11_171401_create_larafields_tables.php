@@ -18,9 +18,10 @@ class CreateLarafieldsTable extends Migration
             $table->enum('type', [
                 'text', 'email', 'password', 'radio', 'checkbox', 'textarea',
                 'select', 'file', 'date', 'switch', 'range'
-            ]);
+            ])->default('text');
             $table->string('name');
             $table->string('label');
+            $table->string('description')->nullable();
             $table->json('options');
             $table->timestamps();
         });
