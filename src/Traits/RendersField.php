@@ -28,6 +28,8 @@ trait RendersField
                 return 'larafields::text';
             case 'checkbox':
                 return 'larafields::checkbox';
+            case 'checkbox-group':
+                return 'larafields::checkbox-group';
             case 'number':
                 return 'larafields::number';
             case 'radio':
