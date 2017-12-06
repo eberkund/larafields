@@ -40,6 +40,8 @@ trait RendersField
                 return 'larafields::textarea';
             case 'range':
                 return 'larafields::range';
+            case 'file':
+                return 'larafields::file';
             default:
                 throw new InvalidFieldTypeException($this);
         }
