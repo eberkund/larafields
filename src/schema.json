@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "defintions": {
+        "choice": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "type": "object",
+    "properites": {
+        "min": { 
+            "type": "integer" 
+        },
+        "max": { 
+            "type": "integer" 
+        },
+        "choices": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/choice"
+            }
+        }
+    }
+}
