@@ -3,7 +3,7 @@
         {{ $field->label }}
     </label>
 
-    <select class="form-control" id="field-{{ $field->id }}">
+    <select class="custom-select" id="field-{{ $field->id }}">
         @foreach ($field->options->choices as $choice)
             <option value="{{ $choice->value }}">
                 {{ $choice->label }}

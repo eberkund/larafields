@@ -1,15 +1,21 @@
 {
     "name": "eberkund/larafields",
+    "homepage": "https://github.com/eberkund/larafields",
     "description": "A custom fields package for Laravel",
+    "keywords": ["laravel", "custom-fields", "json"],
     "license": "MIT",
     "type": "library",
     "require": {
         "php": ">=7.0",
-        "illuminate/support": "5.*"
+        "illuminate/support": "5.*",
+        "justinrainbow/json-schema": "^5.2"
     },
-    "author": {
-        "name": "Erik Berkun-Drevnig"
-    },
+    "authors": [
+        {
+            "name": "Erik Berkun-Drevnig",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Eberkund\\Larafields\\": "src/"
@@ -22,5 +28,9 @@
             ]
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
 }
