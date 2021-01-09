@@ -8,7 +8,7 @@ use JsonSchema\Validator;
 
 class FieldRule implements Rule
 {
-    private $validator;
+    private Validator $validator;
 
     /**
      * Create a new rule instance.

@@ -6,19 +6,12 @@ use Eberkund\Larafields\Exceptions\InvalidFieldTypeException;
 
 trait RendersField
 {
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
-    /**
-     * @return string
-     * @throws InvalidFieldTypeException
-     */
-    public function view()
+    public function view(): string
     {
         switch ($this->getType()) {
             case 'text':

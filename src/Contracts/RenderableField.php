@@ -4,7 +4,7 @@ namespace Eberkund\Larafields\Contracts;
 
 interface RenderableField
 {
-    public function view();
+    public function view(): string;
 
-    public function getType();
+    public function getType(): string;
 }
